@@ -8919,16 +8919,6 @@ h1, h2, h3, h4, h5,
     font-weight: 400;
     color: #fff; }
 
-.ftco-hireme {
-  background: #ffbd39;
-  z-index: -1; }
-  .ftco-hireme h2 {
-    color: #fff;
-    font-size: 40px;
-    font-weight: 900; }
-    .ftco-hireme h2 span {
-      color: #ffbd39; }
-
 @media (min-width: 992px) {
   .margin-top {
     margin-top: -70px;
@@ -9062,6 +9052,15 @@ textarea.form-control {
   border-radius: 5px; }
   .about-author .desc h3 {
     font-size: 24px; }
+
+.ftco-hireme {
+  background: #ffbd39;}
+  .ftco-hireme h2 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900; }
+    .ftco-hireme h2 span {
+      color: #ffbd39; }
 
 .ftco-section {
   padding: 7em 0;

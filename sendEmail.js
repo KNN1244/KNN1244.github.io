@@ -6,7 +6,7 @@ function sendEmail() {
         message: document.querySelector('[name="message"]').value
     };
 
-    emailjs.send('service_vivqcds', 'template_8mkb8rn', templateParams)
+    emailjs.send('service_vivqcds', 'template_i16oml5', templateParams)
         .then(function(response) {
             alert('Email sent successfully!');
         }, function(error) {
