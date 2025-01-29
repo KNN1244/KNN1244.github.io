@@ -46,7 +46,7 @@
 	      </div>
 	    </div>
 	  </nav>
-	  <section class="hero-wrap js-fullheight" style="background-image: url('../images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+	  <section class="hero-wrap js-fullheight" style="background-image: url('../images/Verilog_Projects_bg.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -61,118 +61,55 @@
     <section class="ftco-section">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 ftco-animate">
-            <h2 class="mb-3">It is a long established fact a reader be distracted</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.</p>
+          <div class="col-lg-12 ftco-animate">
+            <h2 class="mb-3">#1. Alarm Clock Project</h2>
             <p>
-              <img src="../images/image_3.jpg" alt="" class="img-fluid">
+              The alarm clock project takes advantage of NEXYS A7 development board's 7-segment displays as well as its mono audio output. The user can set a time
+              using the left set of 7-segment displays and the five black buttons. The top and bottom buttons increase and decrease the set time and the left and right
+              buttons can be used to select the minute and second sections. The clock is run by the onboard 100MHz oscillators and is programed to increase the displayed
+              number every second. When the set time matches the clock time, the mono audio port will output a programmed sound and the rgb leds will ligth up for 30 seconds.
+              Unless the user the stop the alarm using the middle button, the alarm will sound until completion.
             </p>
-            <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
-            <h2 class="mb-3 mt-5">#2. Creative WordPress Themes</h2>
-            <p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
             <p>
-              <img src="../images/image_4.jpg" alt="" class="img-fluid">
+              <img src="../images/Alarm_Clock.jpeg" alt="" class="img-fluid">
             </p>
-            <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit, porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
-            <p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni. Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
-            <p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur recusandae!</p>
-            <p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis, inventore?</p>
-            <div class="tag-widget post-tag-container mb-5 mt-5">
-              <div class="tagcloud">
-                <a href="#" class="tag-cloud-link">Life</a>
-                <a href="#" class="tag-cloud-link">Sport</a>
-                <a href="#" class="tag-cloud-link">Tech</a>
-                <a href="#" class="tag-cloud-link">Travel</a>
-              </div>
-            </div>
+            <p>
+              The verilog projects are complied in vivado which translates the verilog code into hardware design which can be implemented on the FPGA. I use the
+              tool's debugging features and simulation features to test my verilog code before implementation which streamlines my project development process.
+              Although the tool's complie time is longer than a normal complier being able to interact with the code on the development code gives me a better
+              understanding of my design.
+            </p>
+            <p>
+              I also used block diagrams to expand my project ideas to distinguishable blocks. An example for the alarm clock project is shown below.
+            </p>
+            <p>
+              <img src="../images/Alarm_Clock_Block_Diagram.png" alt="" class="img-fluid">
+            </p>
+              <h2 class="mb-3 mt-5">#2. Snake Game Project</h2>
+            <p>
+              The snake game project utilizes the Nexy A7 development board's VGA output to an external display. For this project, I have a verilog module that handles
+              the VGA output such as the screen refresh rate, pixel position and pixel color. This module act as a driver to display to the screen but modifications 
+              were necessary to adapt the module to my specific development board. This means that it is easy to mess up a parameter and stop the VGA output
+            </p>
+            <p>
+              <img src="../images/Snake_Game_In_Progress.png" alt="" class="img-fluid">
+            </p>
+            <p>
+              The project is a replication of the classic snake game but the head and tail of the snake have different sprites compared to the body. Since these 
+              sprites are directional, I had to relate the snake's direction to the sprite that needs to be displayed. The buttons on the development board are 
+              used to control the direction of the snake. The middle button served as a reset button. The sprites are displayed via a masking method and the all
+              sprites on the screen have a hierarchy. The blue walls limit the playable area with a 40x40 grid. The red apple changes location randomly when eaten.
+              Since randomness is not avaliable on a FPGA, a fast clock and counter is used to simulate randomness.
+            </p>
+            <p>
+              <img src="../images/Snake_Game_Final.png" alt="" class="img-fluid">
+            </p>
+             The project is expanded to record and display the socre, the game logo, a vitory screen and a lose screen. The game will also show a set of how 
+             to play text for a set amount of time before disappering. The game also had audio feedback via a background muisc and a beep when the snake eats
+             the apple. The audio also changes to a win song and a lose song if those conditions are triggered. The movement of the snake is linked to the 
+             screen's refresh rate and moves a certain amount of pixel at a time. In the finialized picture the hierarchy of the sprites are seen clearly. For 
+             example, the blue border is displayed over the gird and the snake body is displayed over both the grid, the black background and the logo text.
             
-            <div class="about-author d-flex p-4 bg-dark">
-              <div class="bio mr-5">
-                <img src="../images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>George Washington</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
-              </div>
-            </div>
-
-          </div> <!-- .col-md-8 -->
-          <div class="col-lg-4 sidebar ftco-animate">
-            <div class="sidebar-box">
-              <form action="#" class="search-form">
-                <div class="form-group">
-                  <span class="icon icon-search"></span>
-                  <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
-                </div>
-              </form>
-            </div>
-            <div class="sidebar-box ftco-animate">
-            	<h3 class="heading-sidebar">Categories</h3>
-              <ul class="categories">
-                <li><a href="#">Interior Design <span>(12)</span></a></li>
-                <li><a href="#">Exterior Design <span>(22)</span></a></li>
-                <li><a href="#">Industrial Design <span>(37)</span></a></li>
-                <li><a href="#">Landscape Design <span>(42)</span></a></li>
-              </ul>
-            </div>
-
-            <div class="sidebar-box ftco-animate">
-              <h3 class="heading-sidebar">Recent Blog</h3>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(../images/pic01.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> March 12, 2019</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(../images/image_2.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> March 12, 2019</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(../images/image_3.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> March 12, 2019</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="sidebar-box ftco-animate">
-              <h3 class="heading-sidebar">Tag Cloud</h3>
-              <div class="tagcloud">
-                <a href="#" class="tag-cloud-link">house</a>
-                <a href="#" class="tag-cloud-link">office</a>
-                <a href="#" class="tag-cloud-link">building</a>
-                <a href="#" class="tag-cloud-link">land</a>
-                <a href="#" class="tag-cloud-link">table</a>
-                <a href="#" class="tag-cloud-link">interior</a>
-                <a href="#" class="tag-cloud-link">exterior</a>
-                <a href="#" class="tag-cloud-link">industrial</a>
-              </div>
-            </div>
-
-            <div class="sidebar-box ftco-animate">
-              <h3 class="heading-sidebar">Paragraph</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
-            </div>
-          </div>
-
         </div>
       </div>
     </section> <!-- .section -->
