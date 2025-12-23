@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Analog Design Projects</title>
+    <title>PCB Design Projects</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -46,13 +46,13 @@
 	      </div>
 	    </div>
 	  </nav>
-	  <section class="hero-wrap js-fullheight" style="background-image: url('../images/Analog_Projects_bg.jpg');" data-stellar-background-ratio="0.5">
+	  <section class="hero-wrap js-fullheight" style="background-image: url('../images/PCB_Projects_bg.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
           <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
-            <h1 class="mb-3 bread"><span>Analog Design</span></h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="../index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="../index.html#projects-section">Projects <i class="ion-ios-arrow-forward"></i></a></span> <span>Analog Design <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread"><span>PCB Design</span></h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="../index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="../index.html#projects-section">Projects <i class="ion-ios-arrow-forward"></i></a></span> <span>PCB Design </span></p>
           </div>
         </div>
       </div>
@@ -62,29 +62,57 @@
       <div class="container">
           <div class="col-lg-12 ftco-animate">
             <h2 class="mb-3">#1. State Variable Filter</h2>
-            <p>A state variable filter (SVF) using three operational amplifiers (op-amps) is a versatile analog filter circuit that produces multiple outputs—high-pass (HP), band-pass (BP), and low-pass (LP)—from a single structure. The circuit consists of three op-amps connected in series, with resistor and capacitor networks determining the cutoff frequencies and quality factor. Each op-amp is configured to perform a specific filter function: the first op-amp generates the high-pass filter, the second produces the band-pass filter, and the third creates the low-pass filter. Feedback paths connect the op-amps, forming the necessary state variables for the circuit's operation.</p>
+            <p>This project implements a state variable filter (SVF) using three operational amplifiers to generate high-pass, band-pass, and low-pass outputs from 
+              a single analog circuit. Each op-amp stage performs a specific function, and together they form a flexible filtering system whose cutoff frequency and 
+              response are set by resistor and capacitor values. Because all three filter outputs are derived from the same internal signals, they remain mathematically
+              related and consistent across the entire circuit.</p>
             <p>
               <img src="../images/State_Filter_Project.png" alt="" class="img-fluid">
             </p>
-            <p>The first op-amp is configured as a high-pass filter, with a capacitor in series with the input and a resistor to ground. This stage amplifies the high-frequency components of the input signal while attenuating the lower frequencies, producing the high-pass output. The output of the first op-amp feeds into the second op-amp, which is designed as a band-pass filter. Using a combination of resistors and capacitors, this stage integrates the high-pass signal and produces a band-pass signal centered around a specific frequency, determined by the component values. The band-pass signal represents a dynamic state of the system and serves as an intermediate signal for the low-pass stage.</p>
-
-            <p>The third op-amp processes the band-pass signal through a resistor-capacitor network in its feedback loop, integrating it to produce the low-pass output. This stage allows only low-frequency components to pass while attenuating higher frequencies. Additionally, the low-pass output is fed back to the earlier stages through carefully selected resistors, enabling precise control over the cutoff frequency and Q-factor. This feedback mechanism ensures that the high-pass, band-pass, and low-pass outputs are mathematically related and consistent, all derived from the same state variables.</p>
-              
-            <p>The SVF’s design offers several advantages. It provides simultaneous access to high-pass, band-pass, and low-pass signals without needing separate circuits for each function. Adjusting a few resistor or capacitor values allows for easy tuning of the filter’s cutoff frequency and quality factor. Additionally, the feedback structure maintains predictable and stable filtering performance. Because of its flexibility and efficiency, the state variable filter is commonly used in applications such as audio signal processing, synthesizers, and control systems.</p>
+            <p>The SVF design allows multiple filter responses to be accessed simultaneously without requiring separate circuits for each type. By adjusting only a 
+              few component values, such as the internal resistors and capacitors, the filter’s cutoff frequency and quality factor can be easily tuned while maintaining 
+              stable and predictable performance. This makes the circuit well-suited for applications such as audio signal processing, synthesizers, and control systems,
+              where flexibility and efficiency are important. The following graph shows the simulated results of the SVF circuit, where the blue signal shows the low-pass
+              , green signal shows the band-pass, and the red signal shows the high-pass filtered results in the DB scale.</p>
+            <p>
+              <img src="../images/State_Filter_Result.png" alt="" class="img-fluid">
+            </p>
+            <p>
+              The circuit was implemented on a single-layer PCB using mostly through-hole components to simplify assembly, testing, and modifications. The board includes
+              multiple test pads placed throughout the signal path, making it easier to probe signals and debug the filter stages during development. Inputs and outputs 
+              are provided as exposed copper pads for straightforward connections, allowing quick integration with external equipment such as signal generators, 
+              oscilloscopes, and simple audio test systems.
+            </p>
+            <p>
+              <img src="../images/State_Filter_PCB.png" alt="" class="img-fluid">
+            </p>
+            <br>
             <div class="col-md-12 text-center ftco-animate">
               <p><a href="https://github.com/KNN1244/My-Projects/tree/main/Academic%20Projects/State%20Variable%20Filter%20Project" class="btn btn-primary py-4 px-5">State Variable Filter Repo</a></p>
             </div>
-            <!--
-            <h2 class="mb-3 mt-5">#2. Creative WordPress Themes</h2>
-            <p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
-            <p>
-              <img src="../images/image_4.jpg" alt="" class="img-fluid">
-            </p>
-            <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit, porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
-            <p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni. Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
-            <p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur recusandae!</p>
-            <p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis, inventore?</p>
             
+            <h2 class="mb-3 mt-5">#2. Custom Microcontroller PCB Design</h2>
+            <p>
+              This project involved the complete design of a manufacture-ready, four-layer printed circuit board (PCB) centered around the ESP32 microcontroller, 
+              using Altium Designer as the primary CAD tool. The work began by completeing the schematic, where the circuitry is separated into functional blocks such as 
+              power regulation, USB communication, programming interface, and core microcontroller connections. Custom schematic symbols and PCB footprints were created 
+              and verified against manufacturer provided datasheets and common industry practices to ensure dimensional accuracy, readability and pin compatibility. 
+              Throughout the design process, each component's datasheet recommendations were followed, particularly for USB-C connection ports, USB to UART module, 
+              microcontroller's power and ground routing , as these directly affect reliability and performance in real hardware.
+            </p>
+            <p>
+              <img src="../images/ESP32_PCB_TOP.png" alt="" class="img-fluid">
+              <img src="../images/ESP32_PCB_BOT.png" alt="" class="img-fluid">
+            </p>
+            <p>
+              A critical design decision in this project was the use of a four-layer stack-up consisting of Top Signal, 3.3 V Power, Solid Ground Plane, and Bottom 
+              Signal layers. This controlled stack-up improves signal integrity, and routing efficiency by providing space for both wider traces for high amperage power 
+              paths and shorter paths routed away from power paths which reduces electromagnetic interference (EMI). The dedicated ground plane reduces noise coupling
+              and ensures stable reference voltages, while the internal 3.3 V power layer improves current distribution and reduces voltage drop across the board. 
+              This structure is especially important for the ESP32 and USB interfaces, which operate at relatively high frequencies and are sensitive to poor grounding.
+            </p>
+            
+<!--
             <div class="tag-widget post-tag-container mb-5 mt-5">
               <div class="tagcloud">
                 <a href="#" class="tag-cloud-link">Life</a>
@@ -94,15 +122,6 @@
               </div>
             </div>
             
-            <div class="about-author d-flex p-4 bg-dark">
-              <div class="bio mr-5">
-                <img src="../images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>George Washington</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
-              </div>
-            </div>
 -->
 <!--
             <div class="pt-5 mt-5">

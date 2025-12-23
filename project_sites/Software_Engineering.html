@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Arduino Projects</title>
+    <title>Software Engineering Projects</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -46,13 +46,13 @@
 	      </div>
 	    </div>
 	  </nav>
-	  <section class="hero-wrap js-fullheight" style="background-image: url('../images/Arduino_Project_bg.jpg');" data-stellar-background-ratio="0.5">
+	  <section class="hero-wrap js-fullheight" style="background-image: url('../images/Software_Engineering_bg.png');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
           <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
-            <h1 class="mb-3 bread">Arduino Projects</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="../index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="../index.html#projects-section">Projects <i class="ion-ios-arrow-forward"></i></a></span> <span>Arduino Projects </span></p>
+            <h1 class="mb-3 bread">Software Engineering Projects</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="../index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="../index.html#projects-section">Projects <i class="ion-ios-arrow-forward"></i></a></span> <span>Software Engineering Projects </span></p>
           </div>
         </div>
       </div>
@@ -62,63 +62,76 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 ftco-animate">
-            <h2 class="mb-3">#1. Soccer Bot Project</h2>
-            <p>This project brings together electronics, programming, and 3D printing to create a fully functional remote-controlled car powered by an Arduino
-               Nano. The base of the car is a custom 3D-printed chassis designed to house all the essential components neatly while allowing the RC car to push
-               a small ball with a white ram. The Arduino Nano serves as the microcontroller, programmed using the Arduino IDE. It manages the signals received 
-               from a radio receiver chip and translates them into motor commands using an H-bridge motor driver. The firmware was developed to interpret Pulse
-               Width Modulation (PWM) signals from the receiver, enabling precise control of the car's movements, including forward, reverse, left, and right turns.</p>
+            <h2 class="mb-3">#1. Network Sniffer Project</h2>
+            <p>This project is a custom network packet sniffer and HTTP traffic analyzer built in Python and designed to run on a Linux-based virtual network. 
+               A packet sniffer is a tool that captures and inspects data packets—small units of information sent between computers over a network. To test 
+               the project safely, I created an isolated local area network (LAN) using multiple Ubuntu virtual machines, where one machine acted as a client, 
+               another as a web server, and a third ran the sniffer. This setup allowed me to observe real network communication without exposing any traffic 
+               to the internet. The project focuses on both unencrypted HTTP traffic and encrypted HTTPS traffic to demonstrate how data moves across a network 
+               and why secure protocols are important.</p>
+            <p>
+              <img src="../images/Network_S_1.png" alt="" class="img-fluid">
+            </p>
+            <p> Picture showing HTTP and HTTPS servers running in the Server VM</p>
+            <p>
+              <img src="../images/Network_S_2.png" alt="" class="img-fluid">
+            </p>
+            <p> Picture showing HTTP and HTTPS sites opened on the host machine</p>
+            <p> The core functionality of the sniffer is built using Scapy, a Python library that provides low-level access to network packets. Scapy allows 
+               the program to capture packets from a specific network interface (such as ethernet), identify protocols like TCP, UDP, ICMP, and HTTP, and 
+               extract both packet metadata and raw payload data. My program processes each packet in real time, displaying information such as source and 
+               destination IP addresses (numerical identifiers for devices on a network), ports, timestamps, and protocol type. For deeper inspection, the tool
+               includes a hex viewer similar to other industry standard network analysis tools such as Wireshark, showing packet contents in both hexadecimal 
+               and readable ASCII formats. An HTTP-specific view reconstructs web requests and responses, making it easier to understand how web pages and form
+               submissions are transmitted.</p>
+            <p>
+              <img src="../images/Network_S_3.png" alt="" class="img-fluid">
+            </p>
+            <p> HTTP server's log showing recent user interactions</p>
+            <p>
+              <img src="../images/Network_S_4.png" alt="" class="img-fluid">
+            </p>
+            <p> Sniffer GUI showing HTTP packets, capturing the same user interactions</p>
+            <p>
+              <img src="../images/Network_S_5.png" alt="" class="img-fluid">
+            </p>
+            <p> Sniffer GUI showing HTTP credential data extraction from the captured packets</p>
+            <p> To make the tool usable without prior experience in packet analysis, I built a graphical user interface (GUI) using Tkinter, Python’s standard
+               GUI framework. The interface allows users to start and stop packet capture, select which network adapter to monitor, apply protocol and address 
+               filters, and browse captured packets interactively. Captured traffic can also be exported to a CSV file for later analysis. The program built using
+               Python’s threading module which allows the program to be responsive by separating each feature into their own threads such as the network capture
+               and sorting thread, GUI thread and packet translation threads. Overall, this project strengthened my understanding of Linux networking 
+               fundamentals—such as IP addressing, routing, DNS, DHCP, and firewall behavior—while also reinforcing practical Python skills in real-time data
+               processing, GUI development, program optimization via threading and low-level network programming.</p>
+            <p>
+              <img src="../images/Network_S_6.png" alt="" class="img-fluid">
+            </p>
+            <p> HTTPS server's log showing recent user interactions</p>
+            <p>
+              <img src="../images/Network_S_7.png" alt="" class="img-fluid">
+            </p>
+            <p> Sniffer GUI showing HTTPS packets, capturing the same user interactions but failing to decrypt the packets, and extract credential data</p>
+            <p> Feel free to check out the repository below see the specific code and methods used for this project.</p>
+            <br>
+            <div class="col-md-12 text-center ftco-animate">
+              <p><a href="https://github.com/KNN1244/My-Projects/tree/main/Academic%20Projects/Network%20Traffic%20Sniffer%20Project" class="btn btn-primary py-4 px-5">Network Sniffer Repo</a></p>
+            </div>
+            <br>
+<!--
+            <h2 class="mb-3">#2. Symbolic Algebra Calculator Project</h2>
+            <p>turns.</p>
             <p>
               <img src="../images/Soccer_Bot.JPG" alt="" class="img-fluid">
             </p>
-            <p>The car features four independent 12V motors, one for each wheel, providing robust and responsive motion. These motors are driven by the L293D H-bridge chip,
-               which allows bi-directional control and speed modulation via PWM signals generated by the Arduino. Thus, two motors on each side of the car can be controlled separately
-               , allowing it to mimick the movement of a tank, as well as, a responsive driving experience with no turning angle. 
-               Powering the setup is a 12V rechargeable lithium-ion battery pack, which fits snugly on the 3D-printed base,
-               ensuring portability and ease of use. The modular design ensures all components are securely fastened and protected during operation.</p>
-            <p>Altough this project as it is basic, features, such as LED lights, sensors, or even a camera module, can be integrated into the design in
-               the future. Due to the 3D printed base which offers endless possibilities for experimentation and innovation. This project is a fantastic
-               example of how 3D printing, electronics, and programming can come together to create a functional and expandable system.</p>
+            <p> operation.</p>
+            <p> system.</p>
             <p>Below are the link to the code and project summary for the above projects. Please note that the code for these projects are compiled in Arduino IDE and only the code is included for reference.</p>
             <br>
             <div class="col-md-12 text-center ftco-animate">
               <p><a href="https://github.com/KNN1244/My-Projects/tree/main/Academic%20Projects/Soccer%20Bot%20Project" class="btn btn-primary py-4 px-5">Soccer Bot Repo</a></p>
             </div>
             <br>
-            <h2 class="mb-3">#2. PID Electronics Speed Controller Project</h2>
-            <p>This project is a custom electronic speed controller (ESC) system built using two Arduino microcontrollers, designed to provide precise and
-               stable motor speed control using closed-loop PID control with motor speed feedback. The system measures motor speed in real time using an infrared 
-               (IR) sensor and encoder, allowing the controller to continuously adjust the motor output to maintain a desired RPM. The design emphasizes smooth 
-               motor behavior, reliable feedback, and flexibility between manual (non-PID) and PID control modes. The picture below shows the receiver side of the
-               project.</p>
-            <p>
-              <img src="../images/Motor_PID_R.jpg" alt="" class="img-fluid">
-            </p>
-            <p>The receiver-side Arduino is responsible for motor control, feedback processing and data collection. It reads RPM data from the IR sensor using hardware interrupts
-               and calculates the motor speed based on the time between pulses. To improve measurement stability, the code applies averaging and filtering techniques
-               to reduce noise and outliers. A software PID control loop then compares the measured RPM to a target setpoint and adjusts the motor’s PWM signal accordingly,
-               allowing the motor to smoothly accelerate, decelerate, and maintain a consistent speed under changing load conditions. </p>
-            <p>
-              Control commands are transmitted wirelessly using an NRF24L01 radio module. The system supports multiple operating
-              modes, including direct setpoint control and PID-controlled operation. Local pushbuttons on the receiver allows the user to override
-              the wireless PID enable signal, cycling between forced PID on, forced PID off, and radio pass-through control. This ensures safe and
-              predictable behavior even if communication is lost or manual intervention is required. The picture below shows the transmitter side of the project. 
-            </p>
-            <p>
-              <img src="../images/Motor_PID_T.jpg" alt="" class="img-fluid">
-            </p>
-            <p>
-              The transmitter-side Arduino acts as a bridge between the motor controller and a computer. It communicates with a PC over a serial connection,
-              allowing motor commands and PID settings to be sent from LabVIEW in real time. It also receives sensor data such as humidity, temperature,
-              brightness, and RPM readings from the receiver side and displays the information using LabVIEW. This setup enables live testing, tuning, and
-              visualization of motor performance from a graphical interface, making the project well-suited for experimentation, control-system development,
-              and  hardware-software integration. Overall, the project demonstrates practical skills in embedded systems, wireless communication, real-time
-              control, and PID-based motor regulation.
-            </p>
-            <br>
-            <div class="col-md-12 text-center ftco-animate">
-              <p><a href="https://github.com/KNN1244/My-Projects/tree/main/Academic%20Projects/PID%20Electronic%20Speed%20Controller%20Project" class="btn btn-primary py-4 px-5">PID ESC Repo</a></p>
-            </div>
+          -->
             
 
         </div>
